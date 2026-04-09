@@ -1,18 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Academic Paper Knowledge Graph Chatbot</title>
-</head>
-<body>
-
-<h2>Academic Paper Knowledge Graph Chatbot Demo</h2>
+<meta charset="UTF-8">
+<title>Academic Paper Knowledge Graph Chatbot</title>
 
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<style>
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 24px rgba(0,0,0,0.08);
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: 600;
+    color: #1f2a44;
+}
+
+.subtitle {
+    color: #5a6475;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.description {
+    line-height: 1.6;
+    color: #2f3b52;
+    margin-bottom: 30px;
+}
+
+.examples {
+    background: #f7f9fc;
+    padding: 18px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.examples strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.examples ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+df-messenger {
+    --df-messenger-bot-message: #eef2ff;
+    --df-messenger-button-titlebar-color: #1f2a44;
+    --df-messenger-chat-background-color: #ffffff;
+    --df-messenger-font-color: #000000;
+    --df-messenger-send-icon: #1f2a44;
+    --df-messenger-user-message: #e0f2fe;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Academic Paper Knowledge Graph Assistant</h1>
+
+<div class="subtitle">
+Interactive interface for exploring structured NLP research knowledge extracted from ACL Anthology papers
+</div>
+
+<div class="description">
+This assistant provides natural-language access to a knowledge graph constructed from thousands of computational linguistics research papers. The system automatically extracts relationships between datasets, models, tasks, and evaluation metrics across the literature and allows users to query research trends interactively.
+</div>
+
+<div class="examples">
+<strong>Example questions you can ask:</strong>
+<ul>
+<li>Which datasets are used in machine translation research?</li>
+<li>Which models appear most frequently in question answering papers?</li>
+<li>What evaluation metrics are common in summarization?</li>
+</ul>
+</div>
+
 <df-messenger
   chat-title="AcademicPaperKGAssistant"
   agent-id="e241a431-9a2f-4f42-8993-42a6b979544b"
-  language-code="en"
-></df-messenger>
+  language-code="en">
+</df-messenger>
+
+<footer>
+Built using entity extraction, clustering, classification, and knowledge graph construction over ACL Anthology research papers
+</footer>
+
+</div>
 
 </body>
 </html>
